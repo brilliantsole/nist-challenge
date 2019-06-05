@@ -45,7 +45,7 @@ Example Response
     * Method: POST
     * Headers: `Content-Type: application/json`
     * Body: Haptic motor update flags and actions (DevicesArguments)
-    * Response: Connection state information (DevicesResponse)
+    * Response: Haptic update results (HapticsUpdateResult)
 
 Example Body of Request to Enable All Motors
 ```json
