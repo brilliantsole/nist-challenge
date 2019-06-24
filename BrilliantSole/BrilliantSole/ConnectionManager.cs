@@ -238,19 +238,19 @@ namespace BrilliantSole
             {
                 case "vibrate":
                     await this.UpdateLeftDeviceHaptics(update.leftDeviceForwardHaptic, update.leftDeviceReverseHaptic);
-                    await this.UpdateRightDeviceHaptics(update.rightDeviceForwardHaptic, update.rightDeviceForwardHaptic);
+                    await this.UpdateRightDeviceHaptics(update.rightDeviceForwardHaptic, update.rightDeviceReverseHaptic);
                     await Task.Delay(250);
                     await this.TurnOffHaptics();
                     await Task.Delay(100);
                     await this.UpdateLeftDeviceHaptics(update.leftDeviceForwardHaptic, update.leftDeviceReverseHaptic);
-                    await this.UpdateRightDeviceHaptics(update.rightDeviceForwardHaptic, update.rightDeviceForwardHaptic);
+                    await this.UpdateRightDeviceHaptics(update.rightDeviceForwardHaptic, update.rightDeviceReverseHaptic);
                     await Task.Delay(250);
                     await this.TurnOffHaptics();
                     return result;
                 case "update":
                 default:
                     await this.UpdateLeftDeviceHaptics(update.leftDeviceForwardHaptic, update.leftDeviceReverseHaptic);
-                    await this.UpdateRightDeviceHaptics(update.rightDeviceForwardHaptic, update.rightDeviceForwardHaptic);
+                    await this.UpdateRightDeviceHaptics(update.rightDeviceForwardHaptic, update.rightDeviceReverseHaptic);
                     return update;
             }
         }
