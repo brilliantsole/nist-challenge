@@ -176,6 +176,11 @@ namespace BrilliantSole
         /// <returns></returns>
         public async Task<ConnectionManager> Disconnect()
         {
+            if (this.state == State.Scanning)
+            {
+                Console.WriteLine("Stopping Scanning...");
+                this.watcher.Stop();
+            }
             Console.WriteLine("Attempting to disconnect from devices.");
             if (this.state == State.Connected)
             {
